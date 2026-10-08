@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+# kaynak fotoğraflar (büyük, siteye gerekmiyor)
+assets/products/raw/

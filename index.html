@@ -1,0 +1,240 @@
+<title>NOCTÉ Atelier</title>
+<meta name="description" content="NOCTÉ — Karaköy'de kesilen, elde bitirilen dış giyim. Sonbahar / Kış 26 koleksiyonu.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+
+<div class="stage-bg" aria-hidden="true"></div>
+<canvas class="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <p class="loader__eyebrow mono">Atelier · Karaköy, İstanbul</p>
+    <div class="loader__word"><span>N</span><span>O</span><span>C</span><span>T</span><span>É</span></div>
+    <div class="loader__row mono"><span class="loader__task">Kumaş dokunuyor</span><span class="loader__num">000</span></div>
+    <div class="loader__bar"><i></i></div>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label"></span></div><div class="cursor__dot"></div></div>
+
+<header class="nav">
+  <a href="#top" class="nav__logo" data-scroll aria-label="NOCTÉ, başa dön">NOCTÉ</a>
+  <nav class="nav__links" aria-label="Ana menü">
+    <a href="#collection" data-scroll class="roll"><span data-text="Koleksiyon">Koleksiyon</span></a>
+    <a href="#lookbook" data-scroll class="roll"><span data-text="Lookbook">Lookbook</span></a>
+    <a href="#anatomy" data-scroll class="roll"><span data-text="Atölye">Atölye</span></a>
+    <a href="#shop" data-scroll class="roll"><span data-text="Mağaza">Mağaza</span></a>
+  </nav>
+  <button class="nav__cart" type="button" id="cartOpen" data-magnetic aria-label="Sepeti aç">Sepet <span class="nav__count" id="cartCount">0</span></button>
+</header>
+
+<main id="top">
+  <!-- 00 · hero -->
+  <section class="hero" id="hero" data-bg="#0e0c0a" data-fg="#ece6db">
+    <div class="hero__meta mono">
+      <span>Sonbahar / Kış 26</span>
+      <span>Koleksiyon N°07</span>
+      <span>41°01′ K · 28°58′ D</span>
+    </div>
+    <h1 class="hero__title" aria-label="NOCTÉ"><span>N</span><span>O</span><span>C</span><span>T</span><span>É</span></h1>
+    <div class="hero__foot">
+      <p class="hero__lede">Karaköy'de kesilen, elde bitirilen dış giyim. Az parça, uzun ömür.</p>
+      <a class="hero__tag" href="#collection" data-scroll data-cursor="Keşfet">
+        <span class="mono">Model 01</span>
+        <span class="hero__tag-name">Denim Çalışma Ceketi</span>
+        <span class="mono">₺6.950</span>
+      </a>
+      <div class="hero__scroll mono">Kaydır <i></i></div>
+    </div>
+  </section>
+
+  <!-- 01 · manifesto -->
+  <section class="manifesto" id="manifesto" data-bg="#0e0c0a" data-fg="#ece6db">
+    <p class="label mono">(01) Manifesto</p>
+    <p class="manifesto__text">Az ama doğru. Her parça Karaköy'deki atölyemizde tek bir terzinin elinden çıkar. Mevsim için değil; yıllarca giyilmek, onarılmak ve bir gün devredilmek için dikiyoruz.</p>
+    <dl class="manifesto__facts">
+      <div><dt class="mono">Kuruluş</dt><dd>2019, Karaköy</dd></div>
+      <div><dt class="mono">Sezon başına</dt><dd>4 model</dd></div>
+      <div><dt class="mono">Onarım</dt><dd>Ömür boyu, ücretsiz</dd></div>
+    </dl>
+  </section>
+
+  <!-- 02 · collection (pinned, 4 garments) -->
+  <section class="collection" id="collection" data-bg="#17120d" data-fg="#ede6da">
+    <div class="collection__ghost" aria-hidden="true"></div>
+    <div class="collection__drag" data-cursor="Sürükle" aria-hidden="true"></div>
+    <header class="collection__head">
+      <p class="label mono">(02) Koleksiyon · Sonbahar / Kış 26</p>
+      <p class="collection__count mono"><span class="collection__cur">01</span> / 04</p>
+    </header>
+    <div class="collection__panels"></div>
+    <ol class="collection__rail" aria-label="Koleksiyon modelleri"></ol>
+    <p class="collection__hint mono">Sürükle, çevir · rengi değiştir · gerçek ürün fotoğrafı</p>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Karaköy'de elde bitirildi</span><i></i><span>Ömür boyu ücretsiz onarım</span><i></i><span>30 gün koşulsuz iade</span><i></i><span>₺2.500 üzeri ücretsiz kargo</span><i></i>
+      <span>Karaköy'de elde bitirildi</span><i></i><span>Ömür boyu ücretsiz onarım</span><i></i><span>30 gün koşulsuz iade</span><i></i><span>₺2.500 üzeri ücretsiz kargo</span><i></i>
+    </div>
+  </div>
+
+  <!-- 03 · lookbook (pinned, horizontal) -->
+  <section class="lookbook" id="lookbook" data-bg="#e8e2d6" data-fg="#15120e">
+    <div class="lookbook__track">
+      <header class="lookbook__intro">
+        <p class="label mono">(03) Lookbook</p>
+        <h2 class="split-lines">İstanbul, <em>sabahın</em> altısı.</h2>
+        <p class="lookbook__text">Sezonun parçalarını şehrin en sessiz saatinde, gün ağarırken fotoğrafladık. Sağa doğru kaydırın.</p>
+      </header>
+      <figure class="look" data-cursor="Look 01"><div class="look__media"><img src="assets/lookbook/look-01.jpg" alt="Kömür rengi bukle yün palto ve kasket giymiş adam, koyu stüdyo fonu" loading="eager" decoding="async"></div><figcaption><span class="mono">01</span> Galata <span class="mono">06:12</span></figcaption></figure>
+      <figure class="look look--low" data-cursor="Look 02"><div class="look__media"><img src="assets/lookbook/look-02.jpg" alt="Zeytin yeşili çalışma ceketi giymiş kadın, kum rengi duvar önünde" loading="eager" decoding="async"></div><figcaption><span class="mono">02</span> Kuzguncuk <span class="mono">06:24</span></figcaption></figure>
+      <figure class="look" data-cursor="Look 03"><div class="look__media"><img src="assets/lookbook/look-03.jpg" alt="Siyah kapüşonlu giymiş adamın yandan ışıklı yakın portresi" loading="eager" decoding="async"></div><figcaption><span class="mono">03</span> Karaköy <span class="mono">06:31</span></figcaption></figure>
+      <figure class="look look--low" data-cursor="Look 04"><div class="look__media"><img src="assets/lookbook/look-04.jpg" alt="Kuzu kürkü yakalı balıksırtı yün ceket giymiş kadın" loading="eager" decoding="async"></div><figcaption><span class="mono">04</span> Balat <span class="mono">06:47</span></figcaption></figure>
+      <figure class="look" data-cursor="Look 05"><div class="look__media"><img src="assets/lookbook/look-05.jpg" alt="Siyah tişörtlü oturan adamın siyah-beyaz portresi" loading="eager" decoding="async"></div><figcaption><span class="mono">05</span> Cihangir <span class="mono">06:58</span></figcaption></figure>
+      <figure class="look look--low" data-cursor="Look 06"><div class="look__media"><img src="assets/lookbook/look-06.jpg" alt="Yulaf rengi kruvaze yün paltoyla beton bir geçitte yürüyen kadın" loading="eager" decoding="async"></div><figcaption><span class="mono">06</span> Moda <span class="mono">07:10</span></figcaption></figure>
+      <div class="lookbook__end">
+        <p class="label mono">Sezon boyunca</p>
+        <a href="#shop" data-scroll class="link-xl" data-cursor="Mağaza">Mağazaya<br><em>geç</em> →</a>
+      </div>
+    </div>
+    <div class="lookbook__progress mono"><span class="lookbook__idx">01</span><i><b></b></i><span>06</span></div>
+  </section>
+
+  <!-- 04 · full-bleed reveal -->
+  <section class="reveal" id="reveal" data-bg="#0e0c0a" data-fg="#ece6db">
+    <div class="reveal__media"><img src="assets/lookbook/wide-01.jpg" alt="Uzun siyah paltolu bir adam taş sütuna yaslanmış" decoding="async"></div>
+    <h2 class="reveal__title"><span class="reveal__line">Atölyeden</span><span class="reveal__line"><em>sokağa.</em></span></h2>
+    <p class="reveal__cap mono">Model 01 · 18 saatlik el işçiliği</p>
+  </section>
+
+  <!-- 05 · anatomy (pinned, exploded jacket) -->
+  <section class="anatomy" id="anatomy" data-bg="#120f0c" data-fg="#ede6da">
+    <header class="anatomy__head">
+      <p class="label mono">(04) Atölye</p>
+      <h2 class="split-lines">Bir ceketin <em>anatomisi</em></h2>
+    </header>
+    <svg class="anatomy__lines" aria-hidden="true"><path pathLength="1"/><path pathLength="1"/><path pathLength="1"/><path pathLength="1"/></svg>
+    <div class="loupes" aria-hidden="true"><i class="loupe"></i><i class="loupe"></i><i class="loupe"></i><i class="loupe"></i></div>
+    <div class="anatomy__dots" aria-hidden="true"><i>1</i><i>2</i><i>3</i><i>4</i></div>
+    <div class="callout" data-anchor="collar" data-side="right" style="--top:20%">
+      <span class="callout__no mono">01 · Yaka</span>
+      <h3>Çift dikişli yaka</h3>
+      <p>Telasız, iki kat denimle şekillenir. Yıkandıkça boyna oturur ve kendi kırışığını alır.</p>
+    </div>
+    <div class="callout" data-anchor="button" data-side="left" style="--top:30%">
+      <span class="callout__no mono">02 · Düğme</span>
+      <h3>Bakır çakma düğmeler</h3>
+      <p>Pas tutmayan bakır alaşım, elde çakılır. Zamanla koyulaşıp patina kazanır.</p>
+    </div>
+    <div class="callout" data-anchor="fabric" data-side="left" style="--top:62%">
+      <span class="callout__no mono">03 · Kumaş</span>
+      <h3>14 oz selvedge denim</h3>
+      <p>Okayama'da eski mekikli tezgâhlarda dokunur. İndigo her yıkamada biraz daha açılır.</p>
+    </div>
+    <div class="callout" data-anchor="pocket" data-side="right" style="--top:66%">
+      <span class="callout__no mono">04 · Cep</span>
+      <h3>Kapaklı yama cepler</h3>
+      <p>Köşeleri barteks dikişle sağlamlaştırılır. Yükü taşıyan dikiş, inçte 12 batış.</p>
+    </div>
+    <p class="anatomy__foot mono"><span>42 üretim adımı</span><span>18 saat el işçiliği</span><span>1 terzi</span></p>
+  </section>
+
+  <!-- 06 · craft -->
+  <section class="craft" id="craft" data-bg="#e6dfd2" data-fg="#17130f">
+    <div class="craft__media">
+      <figure class="craft__fig craft__fig--a"><img src="assets/lookbook/craft-01.jpg" alt="Keten bir dikişi iğne ve iplikle elde diken eller" loading="lazy" decoding="async"></figure>
+      <figure class="craft__fig craft__fig--b"><img src="assets/lookbook/craft-02.jpg" alt="Terzi mankeni üzerinde deve tüyü yün ceket ve kumaş kartelası" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="craft__body">
+      <p class="label mono">(05) Süreç</p>
+      <h2 class="split-lines">Yavaş yapılır, <em>uzun</em> yaşar.</h2>
+      <ol class="steps">
+        <li><span class="mono">01</span><div><h3>Kalıp</h3><p>Her beden için kâğıt kalıp elde çizilir; sezonlar boyunca aynı kalıbı inceltiriz.</p></div></li>
+        <li><span class="mono">02</span><div><h3>Kesim</h3><p>Kumaş bir gece dinlendirilir, sonra tek kat halinde makasla kesilir.</p></div></li>
+        <li><span class="mono">03</span><div><h3>Dikim</h3><p>Bir parçayı baştan sona tek terzi diker; iç etikette adı yazar.</p></div></li>
+        <li><span class="mono">04</span><div><h3>Bitiş</h3><p>İlikler elde açılır, düğmeler elde dikilir, son ütü buharla yapılır.</p></div></li>
+      </ol>
+      <dl class="stats">
+        <div><dt class="mono">Üretim adımı</dt><dd><span class="count" data-to="42">42</span></dd></div>
+        <div><dt class="mono">Saat / ceket</dt><dd><span class="count" data-to="18">18</span></dd></div>
+        <div><dt class="mono">Onarılan parça, 2025</dt><dd><span class="count" data-to="1240">1.240</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 07 · shop -->
+  <section class="shop" id="shop" data-bg="#e6dfd2" data-fg="#17130f">
+    <header class="shop__head">
+      <div>
+        <p class="label mono">(06) Mağaza</p>
+        <h2 class="split-lines">Sezonun <em>tamamı</em></h2>
+      </div>
+      <div class="filters" role="tablist" aria-label="Kategoriye göre süz">
+        <button type="button" class="filter is-active" data-filter="all" role="tab" aria-selected="true">Tümü <sup>8</sup></button>
+        <button type="button" class="filter" data-filter="Ceket" role="tab" aria-selected="false">Ceket <sup>2</sup></button>
+        <button type="button" class="filter" data-filter="Tişört" role="tab" aria-selected="false">Tişört <sup>2</sup></button>
+        <button type="button" class="filter" data-filter="Kapüşonlu" role="tab" aria-selected="false">Kapüşonlu <sup>2</sup></button>
+        <button type="button" class="filter" data-filter="Mont" role="tab" aria-selected="false">Mont <sup>2</sup></button>
+      </div>
+    </header>
+    <div class="grid" id="grid"></div>
+  </section>
+</main>
+
+<footer class="footer" id="footer" data-bg="#0e0c0a" data-fg="#ece6db">
+  <div class="footer__top">
+    <h2 class="footer__title split-lines">Yeni modeller yılda <em>dört</em> kez.</h2>
+    <form class="news" id="newsForm" novalidate>
+      <label for="newsEmail" class="label mono">Bülten</label>
+      <div class="news__row">
+        <input id="newsEmail" name="email" type="email" placeholder="e-posta adresiniz" autocomplete="email" required>
+        <button type="submit" data-magnetic>Kaydol</button>
+      </div>
+      <p class="news__note mono" id="newsNote">Ayda en fazla bir e-posta. İstediğin an ayrıl.</p>
+    </form>
+  </div>
+  <div class="footer__cols">
+    <div><p class="label mono">Atölye</p><p>Kemankeş Karamustafa Paşa Mah.<br>Karaköy, 34425 İstanbul</p></div>
+    <div><p class="label mono">Saatler</p><p>Salı – Cumartesi<br>11.00 – 19.00</p></div>
+    <div><p class="label mono">Hizmet</p><p><a href="#shop" data-scroll>Beden rehberi</a><br><a href="#craft" data-scroll>Onarım programı</a><br><a href="#shop" data-scroll>Kargo ve iade</a></p></div>
+    <div><p class="label mono">Takip</p><p><a href="#footer">Instagram</a><br><a href="#footer">Journal</a><br><a href="#footer">Spotify</a></p></div>
+  </div>
+  <div class="footer__word" aria-hidden="true"><span>N</span><span>O</span><span>C</span><span>T</span><span>É</span></div>
+  <div class="footer__base mono">
+    <span>© 2026 NOCTÉ Atelier · Kurgusal marka, tanıtım sitesi</span>
+    <span>Fotoğraflar: Behrooz, nazanin salem, Tony Chen, Ethan Haddox, Adewale Shobaloju, Masoud Razeghi, atelierbyvineeth, Elio Santos, Yasamine June, Avtar Singh, Mediamodifier, Bulbul Ahmed · Unsplash. James Frid · Pexels</span>
+    <a href="#top" data-scroll>Başa dön ↑</a>
+  </div>
+</footer>
+
+<div class="cart-backdrop" id="cartBackdrop"></div>
+<aside class="cart" id="cart" aria-label="Alışveriş sepeti" aria-hidden="true">
+  <header class="cart__head">
+    <h2>Sepet <sup id="cartHeadCount">0</sup></h2>
+    <button type="button" class="cart__close" id="cartClose" aria-label="Sepeti kapat">Kapat</button>
+  </header>
+  <div class="cart__ship mono"><span id="shipText">₺2.500 üzeri ücretsiz kargo</span><i><b id="shipBar"></b></i></div>
+  <ul class="cart__items" id="cartItems" data-lenis-prevent></ul>
+  <p class="cart__empty" id="cartEmpty">Sepetin boş. Koleksiyondan bir parça seç.</p>
+  <footer class="cart__foot">
+    <div class="cart__total"><span>Ara toplam</span><strong id="cartTotal">₺0</strong></div>
+    <button type="button" class="cart__checkout" id="checkout" data-magnetic>Ödemeye geç</button>
+    <p class="mono cart__note">Tanıtım mağazası: ödeme alınmaz.</p>
+  </footer>
+</aside>
+<div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/delaunator@5.0.1/delaunator.min.js"></script>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
+<script type="module" src="js/main.js"></script>

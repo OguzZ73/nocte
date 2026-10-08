@@ -1,0 +1,102 @@
+[
+  {
+    "file": "look-01.jpg",
+    "photographer": "Behrooz",
+    "source_url": "https://unsplash.com/photos/a-man-in-a-coat-and-hat-poses-for-a-picture-kVTzF6GgI4I",
+    "license": "Unsplash License",
+    "orientation": "portrait",
+    "width": 1440,
+    "height": 1800,
+    "description": "Knee-up studio shot of a man in a charcoal boucle-wool overcoat, grey turtleneck and checked flat cap against a graduated charcoal-grey backdrop; subject centered, with plain dark space at the upper left and right."
+  },
+  {
+    "file": "look-02.jpg",
+    "photographer": "nazanin salem",
+    "source_url": "https://unsplash.com/photos/a-woman-wearing-a-brown-jacket-and-tan-pants-GoNP9HI1voU",
+    "license": "Unsplash License",
+    "orientation": "portrait",
+    "width": 1201,
+    "height": 1800,
+    "description": "Waist-up shot of a dark-haired woman in an olive-khaki cotton chore/overshirt jacket layered over a striped shirt, one hand in her hair, against a warm sand-beige studio wall; subject centered, with plain beige space above her head."
+  },
+  {
+    "file": "look-03.jpg",
+    "photographer": "Tony Chen",
+    "source_url": "https://unsplash.com/photos/man-with-dark-hoodie-and-shadows-on-face-jzXKodYi-II",
+    "license": "Unsplash License",
+    "orientation": "portrait",
+    "width": 1200,
+    "height": 1680,
+    "description": "Tight low-key close-up of a man in a black zip hoodie with the hood up, half his face in shadow under warm side light on pure black; face centered, with deep black margins all around (bottom slightly cropped to remove a small chest patch)."
+  },
+  {
+    "file": "look-04.jpg",
+    "photographer": "Ethan Haddox",
+    "source_url": "https://unsplash.com/photos/portrait-photograph-of-woman-in-gray-and-brown-coat-NTjSR3zYpsY",
+    "license": "Unsplash License",
+    "orientation": "portrait",
+    "width": 1200,
+    "height": 1800,
+    "description": "Head-and-shoulders portrait of a dark-haired woman in a charcoal herringbone wool jacket with a tan shearling collar against a dark slate-grey backdrop; subject centered, with calm dark space in the top third."
+  },
+  {
+    "file": "look-05.jpg",
+    "photographer": "Adewale Shobaloju",
+    "source_url": "https://unsplash.com/photos/man-in-black-t-shirt-portrait-4kDtZ_rJMS4",
+    "license": "Unsplash License",
+    "orientation": "portrait",
+    "width": 1200,
+    "height": 1800,
+    "description": "Black-and-white, low-key three-quarter portrait of a seated man in a plain black crew-neck tee resting his cheek on his hand, against a mottled grey painted backdrop; subject fills the center of the frame."
+  },
+  {
+    "file": "look-06.jpg",
+    "photographer": "Masoud Razeghi",
+    "source_url": "https://unsplash.com/photos/stylish-woman-in-a-coat-walks-towards-the-camera-5F3YqqD7r9U",
+    "license": "Unsplash License",
+    "orientation": "portrait",
+    "width": 1470,
+    "height": 1800,
+    "description": "Near full-length shot of a woman walking toward the camera in an oversized oatmeal double-breasted wool coat, white shirt and charcoal wide trousers, in a dark slate-grey concrete passage; subject centered, with dark calm areas left and right."
+  },
+  {
+    "file": "wide-01.jpg",
+    "photographer": "atelierbyvineeth",
+    "source_url": "https://unsplash.com/photos/person-stands-near-a-wall-with-tree-shadows-jtG4aKpgqu8",
+    "license": "Unsplash License",
+    "orientation": "landscape",
+    "width": 2400,
+    "height": 1600,
+    "description": "Young man in a long black wool coat and glasses leaning on a pale stone pillar beside a blue-grey roller shutter streaked with tree shadows; subject sits right of center (about 60-70% across) while the left half is a smooth, out-of-focus dark taupe-brown block ideal for white text."
+  },
+  {
+    "file": "craft-01.jpg",
+    "photographer": "Elio Santos",
+    "source_url": "https://unsplash.com/photos/hands-sewing-white-fabric-5ZQn_gWKvLE",
+    "license": "Unsplash License",
+    "orientation": "square",
+    "width": 1400,
+    "height": 1400,
+    "description": "Warm macro of weathered hands hand-stitching a pale grey linen seam with needle and cotton thread (square crop); the needle point sits just left of center, with thumbs framing the top-left and lower-right and soft brown shadow along the top."
+  },
+  {
+    "file": "craft-02.jpg",
+    "photographer": "Yasamine June",
+    "source_url": "https://unsplash.com/photos/a-suit-and-tie-on-a-mannequins-dummy-tOubjwKS6f0",
+    "license": "Unsplash License",
+    "orientation": "square",
+    "width": 1400,
+    "height": 1400,
+    "description": "Film-toned close-up of a camel brushed-wool tailored jacket on a black tailor's dummy with navy cardigan, white shirt, taupe tie and a cloth swatch card at the shoulder, against dark walnut paneling (square crop); garment fills the center-right, darker wood at the upper left."
+  },
+  {
+    "file": "texture-01.jpg",
+    "photographer": "engin akyurt",
+    "source_url": "https://unsplash.com/photos/a-close-up-view-of-textured-gray-fabric-9LKefJ4Ry5c",
+    "license": "Unsplash License",
+    "orientation": "landscape",
+    "width": 1400,
+    "height": 1050,
+    "description": "Flat, evenly lit close-up of a dark charcoal heathered basketweave textile (wool-look) with no focal point, uniform edge to edge; suitable as a subtle tiled or cover background."
+  }
+]
