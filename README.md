@@ -12,6 +12,8 @@ Kurgusal bir İstanbul giyim markası için hazırlanmış, scroll animasyonlu t
 python3 -m http.server 5173
 ```
 
-Ardından `http://localhost:5173/preview.html` adresini açın.
+Ardından `http://localhost:5173` adresini açın.
 
 Fotoğraflar Unsplash ve Pexels lisanslıdır; fotoğrafçılar sitenin alt bilgisinde listelenmiştir.
+
+`index.html` sitenin kendisidir. `artifact.html` aynı sayfanın Claude Artifact sürümüdür; değiştirdikten sonra `tools/wrap.sh` ile `index.html` yeniden üretilir.
