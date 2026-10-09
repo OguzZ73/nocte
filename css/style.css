@@ -90,20 +90,21 @@ h2 em { font-weight: 400; }
 .loader__bar { height: 1px; background: color-mix(in srgb, var(--bone) 15%, transparent); overflow: hidden; }
 .loader__bar i { display: block; height: 100%; background: var(--brass); transform-origin: left; transform: scaleX(0); }
 
-/* ───────── cursor ───────── */
-.cursor { position: fixed; left: 0; top: 0; z-index: 250; pointer-events: none; display: none; }
+/* ───────── cursor: one inverting disc ───────── */
+.cursor { position: fixed; left: 0; top: 0; z-index: 250; pointer-events: none; display: none; mix-blend-mode: difference; }
 @media (pointer: fine) { .cursor { display: block; } html.has-cursor, html.has-cursor a, html.has-cursor button { cursor: none; } }
-.cursor__dot, .cursor__ring { position: absolute; left: 0; top: 0; border-radius: 50%; transform: translate(-50%, -50%); }
-.cursor__dot { width: 6px; height: 6px; background: var(--fg); }
-.cursor__ring {
-  width: 38px; height: 38px; border: 1px solid color-mix(in srgb, var(--fg) 45%, transparent);
-  display: grid; place-items: center; transition: width .5s var(--ease), height .5s var(--ease), background-color .4s, border-color .4s;
+.cursor__dot {
+  position: absolute; left: 0; top: 0; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%;
+  background: #fff; display: grid; place-items: center;
+  transition: width .5s var(--ease), height .5s var(--ease), margin .5s var(--ease), background-color .35s;
 }
-.cursor__label { font: 500 10px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--bg); opacity: 0; transition: opacity .3s; white-space: nowrap; }
-.cursor.is-label .cursor__ring { width: 92px; height: 92px; background: var(--fg); border-color: var(--fg); }
+.cursor__label { font: 500 10px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink); opacity: 0; transition: opacity .3s; white-space: nowrap; }
+.cursor.is-hover .cursor__dot { width: 56px; height: 56px; margin: -28px 0 0 -28px; }
+.cursor.is-label { mix-blend-mode: normal; }
+.cursor.is-label .cursor__dot { width: 96px; height: 96px; margin: -48px 0 0 -48px; background: var(--brass); }
 .cursor.is-label .cursor__label { opacity: 1; }
-.cursor.is-label .cursor__dot { opacity: 0; }
-.cursor.is-hover .cursor__ring { width: 60px; height: 60px; border-color: var(--fg); }
+.cursor.is-down .cursor__dot { scale: .8; }
+.cursor.is-out .cursor__dot { scale: 0; }
 
 /* ───────── nav ───────── */
 .nav {

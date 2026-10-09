@@ -416,20 +416,31 @@ function marquee() {
 function cursor() {
   if (!finePointer) return;
   root.classList.add('has-cursor');
-  const el = $('.cursor'), ring = $('.cursor__ring'), dot = $('.cursor__dot'), label = $('.cursor__label');
-  const rx = gsap.quickTo(ring, 'x', { duration: 0.55, ease: 'power3' }), ry = gsap.quickTo(ring, 'y', { duration: 0.55, ease: 'power3' });
-  const dx = gsap.quickTo(dot, 'x', { duration: 0.12 }), dy = gsap.quickTo(dot, 'y', { duration: 0.12 });
+  const el = $('.cursor'), dot = $('.cursor__dot'), label = $('.cursor__label');
+  const cx = gsap.quickTo(el, 'x', { duration: 0.22, ease: 'power3' }), cy = gsap.quickTo(el, 'y', { duration: 0.22, ease: 'power3' });
+  const rot = gsap.quickSetter(dot, 'rotation', 'deg'), sx = gsap.quickTo(dot, 'scaleX', { duration: 0.3 }), sy = gsap.quickTo(dot, 'scaleY', { duration: 0.3 });
+  let lx = 0, ly = 0;
   addEventListener('pointermove', (e) => {
-    rx(e.clientX); ry(e.clientY); dx(e.clientX); dy(e.clientY);
+    cx(e.clientX); cy(e.clientY);
+    // stretch along the direction of travel, never while it carries a label
+    const vx = e.clientX - lx, vy = e.clientY - ly, sp = Math.min(Math.hypot(vx, vy) / 60, 0.45);
+    lx = e.clientX; ly = e.clientY;
+    if (!el.classList.contains('is-label') && sp > 0.02) { rot(Math.atan2(vy, vx) * 180 / Math.PI); sx(1 + sp); sy(1 - sp * 0.5); }
+    else { sx(1); sy(1); }
+    clearTimeout(el._t); el._t = setTimeout(() => { sx(1); sy(1); }, 80);
     if (studio) { studio.mouse.x = (e.clientX / innerWidth) * 2 - 1; studio.mouse.y = (e.clientY / innerHeight) * 2 - 1; }
     root.style.setProperty('--glow-x', `${40 + (e.clientX / innerWidth) * 20}%`);
   });
+  addEventListener('pointerdown', () => el.classList.add('is-down'));
+  addEventListener('pointerup', () => el.classList.remove('is-down'));
+  document.addEventListener('pointerleave', () => el.classList.add('is-out'));
+  document.addEventListener('pointerenter', () => el.classList.remove('is-out'));
   let px = -1, py = -1;
   addEventListener('pointermove', (e) => { px = e.clientX; py = e.clientY; }, { passive: true });
   const update = (target) => {
     if (!target) return;
     const t = target.closest('[data-cursor]');
-    if (t) { label.textContent = t.dataset.cursor; el.classList.add('is-label'); el.classList.remove('is-hover'); return; }
+    if (t) { label.textContent = t.dataset.cursor; el.classList.add('is-label'); el.classList.remove('is-hover'); rot(0); return; }
     el.classList.remove('is-label');
     el.classList.toggle('is-hover', !!target.closest('a, button, input'));
   };
@@ -437,7 +448,7 @@ function cursor() {
   addEventListener('scroll', () => { if (px < 0 || ++tick % 4) return; update(document.elementFromPoint(px, py)); }, { passive: true });
   document.addEventListener('pointerover', (e) => {
     const t = e.target.closest('[data-cursor]');
-    if (t) { label.textContent = t.dataset.cursor; el.classList.add('is-label'); el.classList.remove('is-hover'); return; }
+    if (t) { label.textContent = t.dataset.cursor; el.classList.add('is-label'); el.classList.remove('is-hover'); rot(0); return; }
     el.classList.remove('is-label');
     el.classList.toggle('is-hover', !!e.target.closest('a, button, input'));
   });
